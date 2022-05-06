@@ -80,21 +80,10 @@ WSGI_APPLICATION = 'iTechDaily.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbq5cdukhaerb3',
-        'USER': 'tkcnlxopxgbjni',
-        'PASSWORD': '81321873a19c3c5143a6d4a61a42fa0e06ece9424f00dc095319f34c3d4977b8`',
-        'HOST': 'ec2-44-194-4-127.compute-1.amazonaws.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -142,8 +131,8 @@ django_heroku.settings(locals())
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'j.ahmedov.m99@gmail.com'
-EMAIL_HOST_PASSWORD = '1sforchann3ls2019'
+EMAIL_HOST_USER = 'example@gmail.com'
+EMAIL_HOST_PASSWORD = 'pasword'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 

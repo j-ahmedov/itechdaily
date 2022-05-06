@@ -1,0 +1,18 @@
+
+.contact-us-card-body {
+    padding: 20px;
+}
+
+.contact-us-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us-input {
+    width: 280px;
+}
+
+.contact-us-button {
+    float: right;
+    width: 100px;
+}

@@ -1,0 +1,22 @@
+
+@media (max-width: 1180px) {
+
+    .info-container {
+        display: none;
+    }
+
+    .main-body-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+
+    .main-content-container {
+    margin-left: 30px;
+
+    }
+
+}

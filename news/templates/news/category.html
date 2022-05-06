@@ -1,0 +1,47 @@
+{% extends 'news/base.html' %}
+
+{% block title %}
+    iTechDaily :: {{ category.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="content-title label">
+    <h2>{{ category.title }}</h2>
+    </div>
+    {% for item in page_obj.object_list %}
+        <div class="card mb-3 content-card">
+          <img src="{{ item.photo.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.content|truncatewords:30 }}</p>
+            <a href="{% url 'read' item.pk %}" class="link-primary read-more-link">Read more</a>
+            <p class="card-text"><small class="text-muted">{{ item.updated_date|date:'d-m-Y' }}</small></p>
+          </div>
+        </div>
+    {% endfor %}
+
+    {% if page_obj.has_other_pages %}
+          <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                  {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                  {% endif %}
+
+                  {% for p in page_obj.paginator.page_range %}
+                      {% if page_obj.number == p %}
+                          <li class="page-item active" aria-current="page">
+                              <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                          </li>
+                      {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                          <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+                      {% endif %}
+
+                  {% endfor %}
+
+                  {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                  {% endif %}
+              </ul>
+          </nav>
+    {% endif %}
+{% endblock %}

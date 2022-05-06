@@ -1,0 +1,16 @@
+{% extends 'news/base.html' %}
+
+{% block title %}
+    iTechDaily :: Read
+{% endblock %}
+
+{% block content %}
+    <div class="card mb-3 content-card">
+          <img src="{{ news.photo.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ news.title }}</h5>
+            <p class="card-text">{{ news.content|linebreaks }}</p>
+            <p class="card-text"><small class="text-muted">{{ news.updated_date|date:'d-m-Y' }}</small></p>
+          </div>
+        </div>
+{% endblock %}

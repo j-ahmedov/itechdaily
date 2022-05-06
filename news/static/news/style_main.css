@@ -1,0 +1,47 @@
+body {
+    background-color: #f2f2f2;
+
+}
+
+.main-body-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.category-bar-container {
+    width: 200px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background-color: #439d69;
+}
+
+.categories-header {
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+    color: #636395;
+}
+
+/*----------------------------------------------------------------*/
+.main-content-container {
+    width: 650px;
+
+}
+
+.content-title {
+    margin-bottom: 20px;
+}
+
+.read-more-link {
+    float: right;
+}

@@ -1,0 +1,48 @@
+{% extends 'news/base.html' %}
+
+{% block title %}
+    iTechDaily :: Contact
+{% endblock %}
+
+{% block content %}
+
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                <div class="alert alert-primary" role="alert">
+                    {{ message }}
+                </div>
+            {% elif message.tags == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="card content-card">
+          <div class="card-header">
+            Contact Us
+          </div>
+          <div class="card-body contact-us-card-body">
+            <div class="contact-us-input-container">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label label">Name</label>
+                    <input class="form-control contact-us-input" name="user_name" type="text" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label label">Email address</label>
+                    <input type="email" class="form-control contact-us-input" name="user_email" id="exampleFormControlInput1" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label label">Your message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="user_message" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success contact-us-button">Send</button>
+          </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,43 @@
+
+.info-card-details {
+    margin-top: 10px;
+}
+
+.info-contacts-container {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.icon {
+    color: #636395;
+    margin-right: 10px;
+}
+
+.extra-tools-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra-tool a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #636395;
+    margin-right: 5px;
+    margin-left: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.extra-tool a:hover {
+    color: #404062;
+}
+
+.about-text-container {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a6a6a;
+}

@@ -1,0 +1,14 @@
+
+@media (max-width: 650px) {
+
+    .main-body-container {
+            display: block;
+    }
+
+    .main-content-container {
+        margin-top: 30px;
+        margin-left: 0;
+        width: 90vw;
+
+    }
+}

@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$s!)8c8%9nnntw6dg**109zd%0n+&(m&awstzr$f-a=fdfsdf54!5'
+SECRET_KEY = 'django-insecure-$s!)8c8%9nnntw6dg**109zd%0n+&(m&awstzr$f-a=wy%!^m9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,10 +80,21 @@ WSGI_APPLICATION = 'iTechDaily.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbq5cdukhaerb3',
+        'USER': 'tkcnlxopxgbjni',
+        'PASSWORD': '81321873a19c3c5143a6d4a61a42fa0e06ece9424f00dc095319f34c3d4977b8`',
+        'HOST': 'ec2-44-194-4-127.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -131,8 +142,8 @@ django_heroku.settings(locals())
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'example@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = 'j.ahmedov.m99@gmail.com'
+EMAIL_HOST_PASSWORD = '1sforchann3ls2019'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
